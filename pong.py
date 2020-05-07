@@ -69,7 +69,6 @@ def paddle_b_down():
     y -= 20
     paddle_b.sety(y)
 
-
 #keyboard binding
 wn.listen()
 wn.onkeypress(paddle_a_up, "w")
@@ -77,19 +76,9 @@ wn.onkeypress(paddle_a_down, "s")
 wn.onkeypress(paddle_b_up, "Up")
 wn.onkeypress(paddle_b_down, "Down")
 
-
-
-
-
-
-
-
-
 #main loop
 while True:
     wn.update()
-
-
     #move the ball
     ball.setx(ball.xcor() + ball.dx)
     ball.sety(ball.ycor() + ball.dy)
@@ -123,13 +112,3 @@ while True:
     if (ball.xcor() < -340 and ball.xcor() > -350) and (ball.ycor() < paddle_a.ycor() + 40 and ball.ycor() > paddle_a.ycor() -40):
         ball.setx(-340)
         ball.dx *= -1
-
-
-
-
-
-
-
-
-
-
